@@ -49,3 +49,17 @@ function showCollection(array){
 }
 
 showCollection(collection);
+
+function findByArtist(artist, array){
+  let artistArray = [];
+  for (album of array){
+    if (album.artist == artist){
+      artistArray.push(album);
+    }
+  }
+  return artistArray;
+};
+
+console.log('Albums by this artist include:', findByArtist('Tame Impala', collection));
+console.log('should be an empty array:', findByArtist('Daft Punk', collection));
+console.log('Albums by this artist should include 2 objects:', findByArtist('Andrew Bird', collection));
