@@ -41,19 +41,11 @@ console.log('I just added:', album);
 
 console.log(collection);
 
-// function showCollection(array){
-//   console.log('There are', array.length, 'albums in this collection.');
-//   for (musicRecord of array){
-//
-//   }
-//
-// }
+function showCollection(array){
+  console.log('There are', array.length, 'albums in this collection.');
+  for (album of array){ //needs to match album.title below in order to work
+    console.log(album.title, 'by', album.artist + ', published in', album.yearPublished);
+  }
+}
 
-
-
-// Add a function named `showCollection`. This function should:
-//   - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
-//   - Console.log the number of items in the array.
-//   - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
-//
-// - Test the `showCollection` function.
+showCollection(collection);
